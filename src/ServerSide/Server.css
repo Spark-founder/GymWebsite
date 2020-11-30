@@ -1,0 +1,17 @@
+.image_css{
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+}
+.image_css:hover{
+    opacity: 0.7;
+}
+.info{
+    margin: auto;
+    margin-left: 15vmin;
+}
+.upload_button{
+    width: 100% !important; 
+    margin: auto;
+
+}

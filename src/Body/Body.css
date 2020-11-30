@@ -1,0 +1,70 @@
+.body_css{
+  display: flex;
+  flex-direction: column;
+}
+.quotes_css{
+    font-size: 9vmin;
+    font-weight: 1000;
+}
+.contact_us_button{
+  margin: auto;
+  margin-top: 12vmin;
+}
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  #text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+  }
+  .style_lblue_css{
+      position: fixed;
+      right: 0px;
+      width:40vmin;
+      height: 40vmin;
+      background-color: #68E5C9;
+      z-index:-2;
+      opacity: 0.5;
+      transition: 1s;
+  }
+  .style_dblue_css{
+    position: fixed;
+    top:20em;
+    right: 80px;
+    width:30vmin;
+    height: 30vmin;
+    background-color:rgb(38, 55, 173);
+    z-index:-1;
+    border-radius:100%;
+    opacity: 0.8;
+    transition: 1s;
+  }
+.body_css:hover>.style_lblue_css{
+    -ms-transform: rotate(20deg); /* IE 9 */
+    transform: rotate(20deg); 
+    overflow: hidden;
+  }
+  .body_css:hover>.style_dblue_css{
+    transform: scale(1.2, 1.2); 
+    overflow: hidden;
+  }
+  .contact_us_button{
+      width:150px;
+      height: 50px;
+  }

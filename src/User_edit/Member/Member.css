@@ -1,0 +1,49 @@
+.SearchBar{
+    display: flex;
+    overflow: auto;
+    flex: 1 ;
+    background-color: rgb(128,128,128,0.2);
+    height: 75px;
+}
+.input_taker{
+    width: 85%;
+    border-bottom: 1px solid gray !important;
+}
+.basic_css{
+    height: 45px;
+    background-color:transparent;
+    outline: none;
+    border: none;
+    margin: auto;
+}  
+.user_list_item{
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 5vmin;
+    width: 95%;
+    background-color:rgb(128,128,128,0.05);
+}
+.user_list_item:hover{
+    transform: scale(1.02,1.02);
+    background-color:rgb(128,128,128,0.2);
+    box-shadow: 1px 0px  5px 0px  grey;
+}
+.image_avatar{
+    border: 1px solid gray;
+    width: 130px;
+    height: 140px;
+    margin-right: 5vmin;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.info_user{
+    display: flex;
+}
+.label{
+    height: min-content;
+    margin-top: 9px;
+    margin-right: 20px;
+    margin-left: 5vmin;;
+}

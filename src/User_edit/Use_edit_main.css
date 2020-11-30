@@ -1,0 +1,47 @@
+.edit_css_logo{
+    width:20vmin;
+    margin: -20px;
+}
+.Option_css{
+    z-index: -1;
+    position: absolute;
+    top: 53px;
+    background-color: rgb(128,128,128,0.2);
+    width: 45vmin;
+}
+.navbar_css_edit{
+    box-shadow: 0px 0px  5px 0px  grey;
+}
+.Option_css_option{
+    cursor: pointer;
+    box-shadow: 0px 0px  1px 0px  grey;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 10vmin;
+    /* margin-bottom: 5vmin; */
+    top: 12vmin;
+}
+.Option_css_option:hover{
+    background-color:rgb(128,128,128,0.1);
+}
+.option_active{
+    width: 100%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    background-color:rgb(128,128,128,0.3);
+}
+.Main_css{
+    height: 85%;
+    width: 78%;
+    margin: auto;
+    overflow: scroll;
+    position: absolute;
+    top:9vmin;
+    right: 0px;
+}
+.Main_css::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}

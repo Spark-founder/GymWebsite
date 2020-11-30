@@ -1,0 +1,19 @@
+.Login_css{
+    background-color: rgb(236, 237, 239);
+    z-index: -1;
+}
+.main_page{
+    padding: 3vmin;
+    background-color: white;
+    width: 90%;
+    height: max-content;
+    overflow: auto;
+    margin: auto;
+    position: relative;
+    top:15vmin;
+}
+.logo_css_login{
+    width: 150px;
+    margin: auto;
+    margin-bottom: -15vmin;
+}

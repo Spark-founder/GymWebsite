@@ -1,0 +1,42 @@
+.img{
+    margin-top:-40px;
+    width: 15%;
+    display:block;
+    margin-left: auto;
+    margin-right:auto;
+    min-width: 130px;
+}
+.navbar_css{
+    display: flex;
+    height: 15vmin;
+    box-shadow: 1px 0px  10px 0px  grey;
+}
+.navbar_items{
+    margin: auto 0;
+}
+.icon_css{
+    margin: 0 7vmin auto;
+    cursor: pointer;
+    color:grey;
+    transition: 1s;
+}
+.icon_css:hover, .login:hover{
+    color: black;
+    transform: scale(1.2, 1.2);
+}
+.logo_css{
+    margin: auto;
+    width: min-content;
+    transition: 1s;
+}
+.logo_css:hover{
+    transform: scale(2, 2); 
+}
+.navbar_css_css{
+    display: flex;
+    margin: auto;
+}
+.login{
+    color: grey;
+    margin: auto 0;
+}

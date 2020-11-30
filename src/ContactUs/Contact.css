@@ -1,0 +1,45 @@
+.input_css{
+    font-size: 25px;
+    width: 100vmin;
+    margin-top: 5vmin;
+    padding:0 5vmin 0 5vmin;
+    height: 10vmin;
+    background-color:gray;
+    border: none;
+    outline: none;
+    color: white;
+    text-align: center;
+    border: 1.5px solid white
+}
+.input_css::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: lightgray;
+    font-size: 5vmin;
+    text-align: center;
+    opacity: 0.5; /* Firefox */
+  }
+  
+  .input_css:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: lightgray;
+  }
+  .textarea_css{
+      margin-top: 5vmin;
+      height:25vmin;
+      resize: vertical;
+  }
+  .contact_form{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      overflow: hidden;
+  }
+  .button_css{
+      margin: auto;
+      margin-top: 5vmin;
+      font-size: medium;
+  }
+  @media(max-width:681px){
+    .contact_form{
+        width: 75%;
+        margin: auto;
+    }
+  }
