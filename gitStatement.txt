@@ -1,0 +1,16 @@
+git add --all
+git commit
+
+git commit -a -m "__message__" //add and commit im one command
+
+git status //to get status
+git status -s //to get brief summary
+git checkout //to retrive past files
+git log //to see changes that done after checkout
+git log -p -2 //to show two commit
+
+git diff // compare working directory to staging area
+git diff --staged //compare working directory to last staging area
+
+git rm --cached filename //remove file from staging area not from harddisk
+git rm  filename //remove file from staging area also from harddisk
