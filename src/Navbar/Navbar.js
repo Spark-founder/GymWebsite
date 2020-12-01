@@ -17,7 +17,6 @@ export default function Navbar() {
                 <span className="navbar_items"><AnnouncementIcon style={{ fontSize: '5vmin' }} className="icon_css"/></span>
                 </div>
                 <Link to="/login" className="login"><PersonIcon  style={{ fontSize: '5vmin'}}/></Link>
-                <Link to="/edit" className="login">Edit</Link>
             </div>
             
         </div>

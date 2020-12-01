@@ -5,6 +5,7 @@ import Body from './Body/Body'
 import Login from './login/Login'
 import User_edit_main from './User_edit/User_edit_main'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import User from './User/User';
 function App() {
   return (
     <div>
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route exact path="/login">
             <Login/>
+          </Route>
+          <Route exact path="/user">
+              <User/>
           </Route>
         </Switch>
       </Router>
