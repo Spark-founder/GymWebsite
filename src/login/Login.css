@@ -17,3 +17,8 @@
     margin: auto;
     margin-bottom: -15vmin;
 }
+.button_login{
+    display: grid;
+    justify-content: center;
+    width: 75px;
+}

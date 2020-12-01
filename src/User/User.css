@@ -1,8 +1,13 @@
 .Time{
+    margin-top: -5vmin;
     text-align: center;
     font-weight: 1000;
 
 }
 .Time_left{
     font-size: x-large;
+}
+.Calender{
+    margin: auto;
+    margin-top: 5vmin;
 }
