@@ -1,5 +1,4 @@
 import React ,{useState}from "react";
-import Calendar from 'react-calendar';
 import "./User.css";
 import Navbar from "../Navbar/Navbar";
 import 'react-calendar/dist/Calendar.css';
@@ -27,7 +26,7 @@ function User() {
         <h3 className='text-center text-muted'>JOINED ON</h3>
         <div className='Time_left text-capitalize text-center'>{today}</div>
         <div>
-            <Calendar onChange={onChange} value={value} className='Calender'/>
+            {/* <Calendar onChange={onChange} value={value} className='Calender'/> */}
         </div>
       </div>
     </div>

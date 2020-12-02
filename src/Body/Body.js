@@ -1,4 +1,4 @@
-import React ,{useState}from 'react'
+import React from 'react'
 import CancelIcon from '@material-ui/icons/Cancel';
 import './Body.css'
 import '../animation/Body_a.css'
