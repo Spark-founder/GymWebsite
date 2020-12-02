@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import './Member.css'
 import firebase from '../../firebase'
+import EditIcon from '@material-ui/icons/Edit';
 const SORT_OPTIONS = {
     'Age_Asc': { column: 'age', direction: 'asc' },
     'Name_Desc': { column: 'name', direction: 'desc' },
     'Membership_Desc': { column: 'Membership', direction: 'desc' }
 }
 function UserEdit(sortBy = 'Name_Desc') {
-    const [account, setaccount] = useState([{}])
+    const [account, setaccount] = useState([{}]) 
     useEffect(() => {
         const unsubscribe = firebase
             .firestore()
@@ -28,6 +29,11 @@ function Member() {
     const [sortBy, setsortBy] = useState('Name_Desc')
     const [sortByR, setsortByR] = useState('')
     const user_edit=(e)=>{
+    }
+    const Delete=(id)=>{
+        console.log(id)
+        const unsubscribe = firebase.firestore().collection("account")
+        unsubscribe.doc(id).delete();
     }
     const user = UserEdit(sortBy)
     return (
@@ -52,6 +58,8 @@ function Member() {
                         <div key={account.id} className="user_list_item" onClick={e=>user_edit(account.name)}>
                             <img src={account.url||'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm1srbP4ifbyg4WoyVO8KiZlNlO0qjFhw_7A&usqp=CAU'} alt="" className="image_avatar"></img>
                             <div>
+                                <EditIcon className='EditIcon ' style={{'fontSize':20}}/> 
+                                <h3 onClick={()=> Delete(account.id)} style={{'cursor':'pointer'}}>Delete</h3>
                                 <h3 className='text-center'>{account.name}</h3>
                                 <div className='info_user time'>
                                     <label className="label label-default">JOINED ON : </label>

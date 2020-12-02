@@ -3,7 +3,7 @@ import firebase from '../firebase'
 import { storage } from '../firebase'
 import './Server.css'
 import './Edit.css'
-import uuid from 'react-uuid'
+// import uuid from 'react-uuid'
 
 function Edit() {
     const [url, setUrl] = useState("")
@@ -63,14 +63,14 @@ function Edit() {
         second: '2-digit'
     })
     function onSubmit(e) {
-        var id=uuid()
+        // var id=uuid()
         e.preventDefault()
         setloading(true)
         firebase
             .firestore()
             .collection('account')
             .add({
-                id,
+                // id,
                 name,
                 age,
                 Membership,
@@ -90,7 +90,7 @@ function Edit() {
                 setBranch('')
                 setUrl('')
                 setgender('Yamuna Vihar')
-                id=''
+                // id=''
             })
     }
     return (

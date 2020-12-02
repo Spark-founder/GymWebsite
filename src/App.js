@@ -6,6 +6,7 @@ import Login from './login/Login'
 import User_edit_main from './User_edit/User_edit_main'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import User from './User/User';
+import News from './News/News'
 function App() {
   return (
     <div>
@@ -26,6 +27,7 @@ function App() {
           </Route>
           <Route exact path="/news">
               <Navbar/>
+              <News/>
           </Route>
         </Switch>
       </Router>

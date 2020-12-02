@@ -4,6 +4,7 @@ import Edit from '../ServerSide/Edit'
 import UseWindowSize from '../useWindowsize'
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import Member from './Member/Member'
+import News_edit from '../ServerSide/News_edit';
 function User_edit_main() {
     const [option, setOption]=useState('Members_C')
     const OPTIONS=[['Members','Members_C'],['Edit','Edit_C'],['News','News_c']]
@@ -13,6 +14,9 @@ function User_edit_main() {
         }
         else if (o==='Edit_C'){
             return <Edit/>
+        }
+        else if (o==='News_c'){
+            return <News_edit/>
         }
         
     }
