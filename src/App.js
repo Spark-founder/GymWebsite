@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react'
+import React,{useState} from 'react'
 import Navbar from './Navbar/Navbar'
 import Body from './Body/Body'
 import Login from './login/Login'
@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import User from './User/User';
 import News from './News/News'
 function App() {
+  const [S,setS]=useState('Dhruv')
+  console.log(S)
   return (
     <div>
       <Router>
@@ -20,10 +22,11 @@ function App() {
             <User_edit_main/>
           </Route>
           <Route exact path="/login">
-            <Login/>
+            <Login receiveValue={(value) => setS(value)}/>
           </Route>
           <Route exact path="/user">
-              <User/>
+              <User UserId={'4'}/>
+              <h1>{S}</h1>
           </Route>
           <Route exact path="/news">
               <Navbar/>

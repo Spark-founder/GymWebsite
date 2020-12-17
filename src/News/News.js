@@ -1,5 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import './News.css'
+import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
 import firebase from '../firebase'
 function UserEdit(sortBy = 'Name_Desc') {
 
@@ -20,6 +21,10 @@ function UserEdit(sortBy = 'Name_Desc') {
     return account
 }
 function News() {
+    const Delete=(id)=>{
+        const unsubscribe = firebase.firestore().collection("news")
+        unsubscribe.doc(id).delete();
+    }
     const user = UserEdit()
     return (
         <div>
@@ -50,7 +55,8 @@ function News() {
             {user.map((news)=>
                 <div className="container " >
                 <div className="jumbotron new_css" style={{'backgroundColor': news.color}}>
-                    <h6 className='upload_time'>UPLOADED ON {news.today}</h6>
+                    <h3 onClick={()=> Delete(news.id)} style={{'cursor':'pointer'}} className='message_del'><DeleteOutlineIcon/></h3>
+                    <h6 className='upload_time'>UPLOADED ON  {news.today}</h6>
                     <div className="page-header">
                         <h2><strong>{news.heading}</strong></h2>
                     </div>

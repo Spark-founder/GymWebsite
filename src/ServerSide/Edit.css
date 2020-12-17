@@ -1,11 +1,10 @@
 .form_input{
-    margin-left: 5vmin;
+    display: grid;
+    margin: auto;
 }
 .Main_edit{
-    width: 85%;
     margin: auto;
     margin-top: 6vmin;
-    display: flex;
     justify-content: center;
     align-items: center;
 }

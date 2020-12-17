@@ -31,26 +31,25 @@ function User_edit_main() {
                     </div>
                     <ul className="nav navbar-nav navbar-right">
                         <li className="active"><a href="/">Home</a></li>
-                        <li><a href="/">Page 1</a></li>
-                        <li><a href="/">Page 2</a></li>
-                        <li><a href="/">Page 3</a></li>
                     </ul>
                 </div>
             </nav>
-            <div className="Option_css navbar_css_edit" style={{ height: size_px }}>
-                {OPTIONS.map((v)=>
-                    <div className="Option_css_option" onClick={()=>setOption(v[1])}>
-                    {option===v[1]?
-                        <div className="option_active">
-                        <h4 style={{'margin':'auto'}}>{v[0]}</h4>
-                            <ArrowForwardIosIcon style={{'fontSize':50},{'margin':  'auto 0 auto 0'}}/>
-                        </div>
-                        :<h4 style={{'margin':'auto'}}>{v[0]}</h4>}
+            <div className='main_css'>
+                <div className="Option_css navbar_css_edit" style={{ height: size_px }}>
+                    {OPTIONS.map((v)=>
+                        <div className="Option_css_option" onClick={()=>setOption(v[1])}>
+                        {option===v[1]?
+                            <div className="option_active">
+                            <h4 style={{'margin':'auto'}}>{v[0]}</h4>
+                                <ArrowForwardIosIcon style={{'fontSize':50},{'margin':  'auto 0 auto 0'}}/>
+                            </div>
+                            :<h4 style={{'margin':'auto'}}>{v[0]}</h4>}
+                    </div>
+                    )}
                 </div>
-                )}
-            </div>
-            <div className="Main_css" >
-                {foo(option)}
+                <div className="Main_css" style={{'height': size_px}}>
+                    {foo(option)}
+                </div>
             </div>
         </div>
     )

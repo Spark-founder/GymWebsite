@@ -3,9 +3,10 @@ import firebase from '../firebase'
 import { storage } from '../firebase'
 import './Server.css'
 import './Edit.css'
-// import uuid from 'react-uuid'
+// import uuid from 'react-uuid
 
 function Edit() {
+    var CryptoJS = require("crypto-js");
     const [url, setUrl] = useState("")
     const [gender, setgender]=useState('MALE')
     const [image, setImage] = useState(null)
@@ -47,6 +48,8 @@ function Edit() {
     const [Email, setEmail] = useState('')
     const [Branch, setBranch] = useState('Yamuna Vihar')
     const [loading, setloading] = useState(false)
+    const [userId,setUserId]=useState('')
+    const [pass,setPass]=useState('')
     var Currentage= ''
     function inputChecker(e){
         if(/\d/.test(e)){
@@ -70,7 +73,8 @@ function Edit() {
             .firestore()
             .collection('account')
             .add({
-                // id,
+                userId,
+                pass,
                 name,
                 age,
                 Membership,
@@ -83,6 +87,8 @@ function Edit() {
             })
             .then(() => {
                 setName('')
+                setUserId('')
+                setPass('')
                 setAge('')
                 setMembership('')
                 setPn('')
@@ -90,14 +96,14 @@ function Edit() {
                 setBranch('')
                 setUrl('')
                 setgender('Yamuna Vihar')
-                // id=''
             })
     }
     return (
         <div>
             <h4 className='text-center text-capitalize text-info'>{loading ? 'SucessFully Done!' : null}</h4>
-            <div style={{'display':'flex'}}>
-            <div className="info">
+            <h1 className='text-center'>DATABASE</h1>
+            <div>
+                <div className="info">
                     {progress == 0 ? null :
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" aria-valuenow="70"
@@ -113,6 +119,7 @@ function Edit() {
                 </div>
             <form onSubmit={onSubmit} className="form Main_edit" >
                 <div className="form_input" required>
+                    <h3 className='text-center text-muted'>USER INFORMATION</h3>
                     <select className="basic_css input_taker " value={Branch} onChange={e => setBranch(e.currentTarget.value)} placeholder="Brach Location" required >
                         <option value='Yamuna Vihar'>Yamuna Vihar</option>
                         <option value="add_branch">Add another Branch</option>
@@ -127,6 +134,11 @@ function Edit() {
                     <input className="basic_css input_taker " type="text" value={Membership} onChange={e => setMembership(e.currentTarget.value.toUpperCase())} placeholder="Duration in months" required />
                     <input className="basic_css input_taker " type="text" value={Pn} onChange={e => setPn(e.currentTarget.value.toUpperCase())} placeholder="Phone Number" required />
                     <input className="basic_css input_taker " type="text" value={Email} onChange={e => setEmail(e.currentTarget.value.toUpperCase())} placeholder="Email Address" required />
+
+                    <h3 className='text-center text-muted'>ACCOUNT INFO</h3>
+                    <input className="basic_css input_taker " type="text" value={userId} onChange={e => setUserId(e.currentTarget.value.toUpperCase())} placeholder="UserId" required />
+                    <input className="basic_css input_taker " type="text" value={pass} onChange={e => setPass(e.currentTarget.value.toUpperCase())} placeholder="Password" required />
+
                     <button className="submit_button">Submit</button>
                 </div>
             </form>

@@ -45,11 +45,11 @@ function News_edit() {
             <ReactColorPicker color={color} onChange={onColorChange} className='color_range'/>
             <form onSubmit={onSubmit}>
             <div className='message' style={{'backgroundColor': color}}>
-                <textarea className="text_area" placeholder="HEADLINE" rows="2" value={heading} cols="25" style={{'backgroundColor': color}} onChange={(e)=>{Setheading(e.currentTarget.value)}}/>
+                <textarea className="text_area" placeholder="HEADLINE" rows="1" value={heading} cols="25" style={{'backgroundColor': color}} onChange={(e)=>{Setheading(e.currentTarget.value)}}/>
                 <textarea className="text_area" placeholder="SUB HEADLINE" value={subHeading} rows="1" cols="25" style={{'backgroundColor': color}} onChange={e=>SetSubHeading(e.currentTarget.value)}/>
                 <textarea className="text_area" placeholder="CONTENT" value={content} rows="10" cols="25"  style={{'backgroundColor': color}} onChange={e=>{setContent(e.currentTarget.value)}}/>
             </div>
-            <button>Submit</button>
+            <button className="message_button">Submit</button>
             </form>
         </div>
     )

@@ -11,3 +11,7 @@
 .upload_time{
     float: right;
 }
+.message_del{
+    margin: auto;
+    float: right;
+}

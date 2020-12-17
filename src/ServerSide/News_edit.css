@@ -16,6 +16,26 @@
     width: 75%;
     margin: auto;
     margin-top:15px;
+    padding-top: 5px;
     border-radius: 20px;
     box-shadow: 1px 0px  5px 0px  grey;
+    padding-bottom: 15px;
+}
+.message_button{
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    outline: none;
+    height: 35px;
+    width: 25%;
+    border: none;
+    border-radius: 25px;
+    background-color: lightblue;
+    margin-top: 15px;
+    text-align: center;
+    padding-top: 5px;
+
+}
+.message_button:hover{
+    transform: scale(1.02,1.02);
 }

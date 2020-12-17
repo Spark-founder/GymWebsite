@@ -3,9 +3,7 @@
     margin: -20px;
 }
 .Option_css{
-    z-index: -1;
-    position: absolute;
-    top: 53px;
+    float: left;
     background-color: rgb(128,128,128,0.2);
     width: 45vmin;
 }
@@ -19,7 +17,6 @@
     display: flex;
     flex-direction: column;
     height: 10vmin;
-    /* margin-bottom: 5vmin; */
     top: 12vmin;
 }
 .Option_css_option:hover{
@@ -33,15 +30,15 @@
     background-color:rgb(128,128,128,0.3);
 }
 .Main_css{
-    height: 85%;
-    width: 78%;
-    margin: auto;
+    margin-left: auto;
+    flex-grow: 100;
     overflow: scroll;
-    position: absolute;
-    top:9vmin;
-    right: 0px;
 }
 .Main_css::-webkit-scrollbar {
     width: 0px;
     background: transparent; /* make scrollbar transparent */
+}
+.main_css{
+    display: flex;
+    margin-top: -3vmin;
 }

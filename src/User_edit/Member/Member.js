@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Member.css'
 import firebase from '../../firebase'
-import EditIcon from '@material-ui/icons/Edit';
+import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
 const SORT_OPTIONS = {
     'Age_Asc': { column: 'age', direction: 'asc' },
     'Name_Desc': { column: 'name', direction: 'desc' },
@@ -31,7 +31,6 @@ function Member() {
     const user_edit=(e)=>{
     }
     const Delete=(id)=>{
-        console.log(id)
         const unsubscribe = firebase.firestore().collection("account")
         unsubscribe.doc(id).delete();
     }
@@ -58,8 +57,7 @@ function Member() {
                         <div key={account.id} className="user_list_item" onClick={e=>user_edit(account.name)}>
                             <img src={account.url||'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm1srbP4ifbyg4WoyVO8KiZlNlO0qjFhw_7A&usqp=CAU'} alt="" className="image_avatar"></img>
                             <div>
-                                <EditIcon className='EditIcon ' style={{'fontSize':20}}/> 
-                                <h3 onClick={()=> Delete(account.id)} style={{'cursor':'pointer'}}>Delete</h3>
+                                <h3 onClick={()=> Delete(account.id)} style={{'cursor':'pointer'}} className='EditIcon '><DeleteOutlineIcon/></h3>
                                 <h3 className='text-center'>{account.name}</h3>
                                 <div className='info_user time'>
                                     <label className="label label-default">JOINED ON : </label>
@@ -98,8 +96,13 @@ function Member() {
                                 <label className="label label-default">Branch :</label>
                                 <h5>{account.Branch}</h5>
                                 </div>
-
                             </div>
+                            
+                            <div className='info_user'>
+                                <label className="label label-default">User Id :</label>
+                                <h5>{account.userId}</h5>
+                            </div>
+                            
                             </div>
                             </div>
                         </div>
